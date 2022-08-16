@@ -1,1 +1,59 @@
-<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>test-pwa</title><link href="/js/about.49d91dd9.js" rel="prefetch"><link href="/css/app.1687b2ee.css" rel="preload" as="style"><link href="/js/app.83630807.js" rel="preload" as="script"><link href="/js/chunk-vendors.c877a832.js" rel="preload" as="script"><link href="/css/app.1687b2ee.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="test-pwa"><link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"></head><body><noscript><strong>We're sorry but test-pwa doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/js/chunk-vendors.c877a832.js"></script><script src="/js/app.83630807.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>titulo do meu app</title>
+        <meta name="description" content="minha descrição feliz" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#04b201" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="google" content="notranslate" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="" />
+        <meta name="twitter:url" content="https://your-app.com" />
+        <meta name="twitter:title" content="titulo do meu app" />
+        <meta name="twitter:description" content="minha descrição feliz" />
+        <meta name="twitter:image" content="https://www.imagensempng.com.br/wp-content/uploads/2021/08/Homem-de-ferro-Png-1-1024x1024.png" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="titulo do meu app" />
+        <meta property="og:description" content="minha descrição feliz" />
+        <meta property="og:site_name" content="meu app" />
+        <meta property="og:url" content="https://your-app.com" />
+        <meta property="og:image" content="https://www.imagensempng.com.br/wp-content/uploads/2021/08/Homem-de-ferro-Png-1-1024x1024.png" />
+
+        <link rel="preload" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="stylesheet" href="/css/native-like-experience.css" />
+        <script async src="https://unpkg.com/pwacompat" crossOrigin="anonymous"></script>
+
+        <!-- Apple touch icon -->
+        <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon_120.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon_180.png" />
+    </head>
+    <body style="margin: 0">
+        <header style="display: flex; align-items: center; padding: 16px; background-color: #a6b201; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14),0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);">
+            <svg style="margin-right: 12px" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M3 8V6H21V8H3ZM3 13H21V11H3V13ZM3 18H21V16H3V18Z"
+                    fill="black"
+                />
+            </svg>
+            <h4 style="margin: 0; font-weight: 500; color: black">App Name</h4>
+        </header>
+
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("/serviceWorker.js")
+                        .then((registration) => {
+                            console.log("SW registration successful");
+                        });
+                });
+            }
+        </script>
+    </body>
+</html>
